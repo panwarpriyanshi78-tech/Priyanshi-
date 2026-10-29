@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Study notes and answers for eight computer fundamentals questions.">
+  <title>Computer Fundamentals — Questions 1–8</title>
+  <style>
+    :root {
+      --navy: #15345b;
+      --blue: #2463a6;
+      --pale: #edf4fb;
+      --ink: #1f2937;
+      --muted: #5b6573;
+      --line: #d8e1eb;
+      --white: #fff;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: #f4f7fb;
+      line-height: 1.65;
+    }
+    header {
+      color: white;
+      padding: 48px 20px 38px;
+      background: linear-gradient(135deg, #15345b, #2874b9);
+    }
+    .hero, main, footer { max-width: 1050px; margin: auto; }
+    .eyebrow {
+      text-transform: uppercase; letter-spacing: .12em;
+      font-size: .78rem; font-weight: bold; opacity: .85;
+    }
+    h1 { margin: 8px 0 10px; font-size: clamp(2rem, 5vw, 3.1rem); line-height: 1.15; }
+    header p { max-width: 720px; margin: 0; color: #e8f2ff; }
+    nav {
+      position: sticky; top: 0; z-index: 5;
+      background: white; border-bottom: 1px solid var(--line);
+      box-shadow: 0 2px 8px #10243a0b;
+    }
+    .nav-inner {
+      max-width: 1050px; margin: auto; padding: 10px 16px;
+      display: flex; gap: 8px; flex-wrap: wrap;
+    }
+    nav a {
+      text-decoration: none; color: var(--navy); background: var(--pale);
+      padding: 6px 10px; border-radius: 7px; font-size: .9rem; font-weight: 700;
+    }
+    nav a:hover, nav a:focus { background: #d7e8fa; }
+    main { padding: 28px 16px 48px; }
+    .intro {
+      background: white; border: 1px solid var(--line); border-radius: 12px;
+      padding: 18px 20px; margin-bottom: 22px;
+    }
+    section.card {
+      background: white; border: 1px solid var(--line); border-radius: 14px;
+      margin: 20px 0; padding: 24px; box-shadow: 0 5px 18px #15345b0a;
+      scroll-margin-top: 90px;
+    }
+    .q-label {
+      display: inline-block; color: var(--blue); background: var(--pale);
+      padding: 4px 10px; border-radius: 6px; font-size: .82rem;
+      font-weight: 800; letter-spacing: .04em;
+    }
+    h2 { color: var(--navy); margin: 10px 0 12px; font-size: 1.55rem; line-height: 1.3; }
+    h3 { color: #244d78; margin: 22px 0 8px; font-size: 1.1rem; }
+    p { margin: 8px 0 12px; }
+    ul, ol { padding-left: 24px; }
+    li { margin: 5px 0; }
+    .table-wrap { overflow-x: auto; margin: 14px 0; }
+    table { border-collapse: collapse; width: 100%; min-width: 580px; }
+    th, td { border: 1px solid var(--line); padding: 11px 12px; text-align: left; vertical-align: top; }
+    th { background: var(--navy); color: white; }
+    tbody tr:nth-child(even) { background: #f6f9fc; }
+    .note {
+      border-left: 4px solid var(--blue); background: var(--pale);
+      padding: 12px 15px; margin: 14px 0; border-radius: 0 8px 8px 0;
+    }
+    .diagram {
+      display: flex; align-items: center; justify-content: center; flex-wrap: wrap;
+      gap: 9px; padding: 18px; background: #f7faff; border: 1px dashed #b8cbe0;
+      border-radius: 10px; margin: 15px 0;
+    }
+    .box { background: white; border: 2px solid #6f9bc8; border-radius: 8px; padding: 10px 13px; text-align: center; font-weight: 700; }
+    .arrow { color: var(--blue); font-size: 1.4rem; font-weight: 800; }
+    footer { padding: 0 16px 32px; color: var(--muted); text-align: center; font-size: .9rem; }
+    .top-link { display: inline-block; margin-top: 12px; color: var(--blue); }
+    @media (max-width: 600px) {
+      section.card { padding: 17px; }
+      header { padding: 35px 18px 28px; }
+      .diagram { gap: 6px; }
+      .box { padding: 8px; font-size: .9rem; }
+    }
+    @media print {
+      body { background: white; }
+      nav { position: static; box-shadow: none; }
+      section.card, .intro { box-shadow: none; break-inside: avoid; }
+      a { color: inherit; }
+    }
+  </style>
+</head>
+<body id="top">
+  <header>
+    <div class="hero">
+      <div class="eyebrow">Study guide · Computer fundamentals</div>
+      <h1>Computer Systems &amp; Hardware</h1>
+      <p>Clear, structured answers to Questions 1–8, covering computer generations, architecture, input/output devices, programming languages, security, and accessibility.</p>
+    </div>
+  </header>
+
+  <nav aria-label="Question navigation">
+    <div class="nav-inner">
+      <a href="#q1">Q1: Generations</a><a href="#q2">Q2: Architecture</a>
+      <a href="#q3">Q3: Campus systems</a><a href="#q4">Q4: Languages</a>
+      <a href="#q5">Q5: Pointing devices</a><a href="#q6">Q6: Plotters</a>
+      <a href="#q7">Q7: Biometrics</a><a href="#q8">Q8: Accessibility</a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="intro">
+      <strong>How to use this page:</strong> Select a question from the navigation bar to jump to its answer. Tables can be scrolled horizontally on small screens.
+    </div>
+
+    <section class="card" id="q1">
+      <span class="q-label">QUESTION 1 · REMEMBERING</span>
+      <h2>Four characteristics of modern digital computers and five generations</h2>
+      <h3>Four primary characteristics</h3>
+      <ol>
+        <li><strong>Speed:</strong> Executes millions or billions of operations per second.</li>
+        <li><strong>Accuracy:</strong> Produces precise results when the data and instructions are correct.</li>
+        <li><strong>Storage:</strong> Stores large amounts of data and retrieves it quickly.</li>
+        <li><strong>Automation and versatility:</strong> Automatically follows stored instructions and performs many kinds of tasks.</li>
+      </ol>
+      <h3>Hardware technology across five generations</h3>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Generation</th><th>Approximate period</th><th>Key hardware technology</th><th>Examples / features</th></tr></thead>
+        <tbody>
+          <tr><td>First</td><td>1940s–1950s</td><td>Vacuum tubes</td><td>Very large, hot, power-hungry computers; machine language.</td></tr>
+          <tr><td>Second</td><td>1950s–1960s</td><td>Transistors</td><td>Smaller, faster and more reliable than tube-based machines.</td></tr>
+          <tr><td>Third</td><td>1960s–1970s</td><td>Integrated circuits (ICs)</td><td>Many components placed on a single chip.</td></tr>
+          <tr><td>Fourth</td><td>1970s onward</td><td>Microprocessors using VLSI</td><td>Personal computers and compact, affordable systems.</td></tr>
+          <tr><td>Fifth</td><td>Current and evolving</td><td>ULSI, parallel processing and AI-oriented hardware</td><td>Emphasis on artificial intelligence, natural-language processing and advanced computing.</td></tr>
+        </tbody>
+      </table></div>
+      <div class="note">Generation dates can overlap, and fifth-generation descriptions vary by textbook. The key point is the progression from vacuum tubes to transistors, ICs, microprocessors, and increasingly advanced parallel/AI systems.</div>
+    </section>
+
+    <section class="card" id="q2">
+      <span class="q-label">QUESTION 2 · UNDERSTANDING</span>
+      <h2>Flow of data, instructions and control signals in a computer</h2>
+      <p>A computer system combines the CPU, main memory and input/output (I/O) interfaces. They communicate through buses and control signals.</p>
+      <div class="diagram" aria-label="Simplified computer data flow">
+        <div class="box">Input devices</div><span class="arrow">↔</span>
+        <div class="box">I/O interface</div><span class="arrow">↔</span>
+        <div class="box">CPU<br><small>Control unit + ALU + registers</small></div><span class="arrow">↔</span>
+        <div class="box">Main memory</div>
+        <div class="box">Output devices</div>
+      </div>
+      <h3>How the parts interact</h3>
+      <ol>
+        <li><strong>Input:</strong> A keyboard, scanner or other input device sends data through an I/O interface. The interface converts signals into a form the computer can use.</li>
+        <li><strong>Storage:</strong> Data and program instructions are stored in main memory (RAM) while the program runs.</li>
+        <li><strong>Fetch:</strong> The CPU control unit fetches an instruction from memory using the address held in the program counter.</li>
+        <li><strong>Decode:</strong> The control unit interprets the instruction and determines which operation and resources are required.</li>
+        <li><strong>Execute:</strong> The ALU performs arithmetic or logic operations, while registers temporarily hold instructions, addresses and data.</li>
+        <li><strong>Write back:</strong> Results are written to registers or memory, or sent through an I/O interface to an output device.</li>
+      </ol>
+      <h3>Three types of bus</h3>
+      <ul>
+        <li><strong>Data bus:</strong> Carries the actual data and instruction values.</li>
+        <li><strong>Address bus:</strong> Identifies the memory location or I/O register being accessed.</li>
+        <li><strong>Control bus:</strong> Carries signals such as read, write, interrupt, clock and status signals.</li>
+      </ul>
+      <div class="note"><strong>Important:</strong> Data and addresses move through their respective paths, while the control unit coordinates operations by issuing control signals. Interrupts allow I/O devices to request CPU attention.</div>
+    </section>
+
+    <section class="card" id="q3">
+      <span class="q-label">QUESTION 3 · APPLYING</span>
+      <h2>Optical scanners and electronic card readers on a campus</h2>
+      <h3>A. Automating student attendance</h3>
+      <ol>
+        <li>Give each student an ID card with a printed barcode or an RFID/smart-card chip.</li>
+        <li>At a classroom entrance, the student scans the barcode or taps the card on a reader.</li>
+        <li>The reader sends the student ID, date and time to an attendance application.</li>
+        <li>The system checks the timetable and records attendance in a central database.</li>
+        <li>Lecturers and administrators view reports and identify missing or duplicate records.</li>
+      </ol>
+      <h3>B. Automating library checkouts</h3>
+      <ol>
+        <li>Place a barcode or RFID tag on each book and register it in the library database.</li>
+        <li>The borrower scans or taps their student card to identify their account.</li>
+        <li>The book is scanned; the system checks availability and creates a loan record with a due date.</li>
+        <li>At return, the book is scanned again and its status is updated. Overdue reminders can be generated automatically.</li>
+      </ol>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Technology</th><th>How it works</th><th>Campus use</th><th>Considerations</th></tr></thead>
+        <tbody>
+          <tr><td>Barcode scanner</td><td>Optically reads printed bars and spaces.</td><td>Attendance IDs and book checkout.</td><td>Requires a visible, undamaged label and usually a direct scan.</td></tr>
+          <tr><td>OMR scanner</td><td>Detects marked positions on special forms.</td><td>Paper attendance sheets or surveys.</td><td>Forms and marks must meet scanning requirements.</td></tr>
+          <tr><td>RFID reader</td><td>Communicates wirelessly with a tag.</td><td>Quick card taps, book tracking and self-checkout.</td><td>Read range, interference and unauthorized reads must be managed.</td></tr>
+          <tr><td>Smart-card reader</td><td>Reads data from a chip, often with contact or near-field communication.</td><td>Student identity and access control.</td><td>Requires compatible cards, readers and secure authentication.</td></tr>
+        </tbody>
+      </table></div>
+      <h3>Benefits and safeguards</h3>
+      <ul>
+        <li>Reduces manual data entry, queues and transcription errors.</li>
+        <li>Provides faster reports and a searchable record of transactions.</li>
+        <li>Use role-based access, encryption, backups and audit logs.</li>
+        <li>Protect student privacy, provide a manual fallback and prevent card sharing or duplicate scans.</li>
+      </ul>
+    </section>
+
+    <section class="card" id="q4">
+      <span class="q-label">QUESTION 4 · ANALYZING</span>
+      <h2>Low-level and high-level programming languages</h2>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Basis</th><th>Machine language</th><th>Assembly language</th><th>High-level language</th></tr></thead>
+        <tbody>
+          <tr><td>Form</td><td>Binary instructions (0s and 1s).</td><td>Mnemonic instructions such as MOV or ADD.</td><td>Readable statements such as Python, Java or C#.</td></tr>
+          <tr><td>Hardware dependence</td><td>Very high; instruction codes are processor-specific.</td><td>High; mnemonics and registers depend on the processor architecture.</td><td>Usually lower; many languages support multiple platforms, although some platform-specific code may remain.</td></tr>
+          <tr><td>Translation</td><td>Executed directly by the CPU.</td><td>Converted by an assembler into machine code.</td><td>Typically compiled or interpreted, often using a compiler, runtime or virtual machine.</td></tr>
+          <tr><td>Execution speed</td><td>Can be highly efficient when carefully written.</td><td>Can offer fine control and high efficiency.</td><td>Varies by language, compiler, runtime and program; compiled high-level code can be very fast.</td></tr>
+          <tr><td>Programming complexity</td><td>Very difficult to write, debug and maintain.</td><td>More readable than binary, but still requires detailed hardware knowledge.</td><td>Generally easier to read, develop, test and maintain.</td></tr>
+          <tr><td>Typical uses</td><td>Rarely written directly by people today.</td><td>Embedded systems, device-specific routines and performance-critical code.</td><td>Web, mobile, business, scientific and general application development.</td></tr>
+        </tbody>
+      </table></div>
+      <div class="note"><strong>Conclusion:</strong> Low-level languages provide close hardware control but demand more effort and processor-specific knowledge. High-level languages usually improve productivity and portability. Neither category is automatically faster in every situation; actual performance depends on implementation and workload.</div>
+    </section>
+
+    <section class="card" id="q5">
+      <span class="q-label">QUESTION 5 · ANALYZING</span>
+      <h2>Mouse and trackball compared with digitizers and drawing tablets</h2>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Feature</th><th>Mouse</th><th>Trackball</th><th>Graphics digitizer / drawing tablet</th></tr></thead>
+        <tbody>
+          <tr><td>Mechanism</td><td>Move the whole device across a surface; optical sensor measures movement.</td><td>Rotate a stationary ball with fingers or thumb; sensors measure ball movement.</td><td>Stylus movement or position is detected across a digitizing surface; some tablets use absolute coordinates.</td></tr>
+          <tr><td>Coordinate tracking</td><td>Usually relative: pointer moves based on device movement.</td><td>Usually relative: ball rotation moves the pointer.</td><td>Often absolute: a point on the tablet maps to a corresponding screen or drawing coordinate.</td></tr>
+          <tr><td>Precision</td><td>Good for general selection and many CAD tasks.</td><td>Useful for controlled cursor movement in limited desk space.</td><td>High positional precision, useful for tracing plans and detailed illustration.</td></tr>
+          <tr><td>Pressure sensitivity</td><td>Generally not available.</td><td>Generally not available.</td><td>Many pen tablets detect pressure; some also detect tilt and pen angle.</td></tr>
+          <tr><td>Best fit</td><td>General desktop use and routine CAD selection.</td><td>Workstations with limited movement space or users who prefer a stationary device.</td><td>Digital painting, handwriting, tracing, drafting and detailed design input.</td></tr>
+        </tbody>
+      </table></div>
+      <h3>Application comparison</h3>
+      <ul>
+        <li><strong>CAD:</strong> A mouse is convenient for menus and selecting objects; a digitizer can be better for tracing paper plans and entering precise points. Accuracy also depends on calibration, software and user technique.</li>
+        <li><strong>Digital art:</strong> A pressure-sensitive pen tablet supports varied line width and brush opacity, producing a more natural drawing experience than a standard mouse or trackball.</li>
+      </ul>
+      <div class="note">A digitizer is not always more accurate in every workflow; choose based on required precision, coordinate mapping, comfort, software support and budget.</div>
+    </section>
+
+    <section class="card" id="q6">
+      <span class="q-label">QUESTION 6 · EVALUATING</span>
+      <h2>Drum/flatbed plotter versus UHD monitor and large-format printer</h2>
+      <p>For most modern civil engineering offices, a high-resolution monitor paired with a large-format printer is the more practical general-purpose solution. A specialized plotter may still be justified for particular workflows or legacy equipment.</p>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Criterion</th><th>Drum / flatbed plotter</th><th>UHD monitor + large-format printer</th></tr></thead>
+        <tbody>
+          <tr><td>Line resolution</td><td>Traditional pen plotters can produce precise vector lines; output depends on mechanics, pen and media.</td><td>UHD display helps inspect fine detail on screen; printer resolution, line control and media determine final paper quality.</td></tr>
+          <tr><td>Scalability</td><td>Limited by machine size, media handling and supported formats.</td><td>Digital drawings can be enlarged or revised easily; large-format printers support many sheet sizes and common CAD workflows.</td></tr>
+          <tr><td>Versatility</td><td>Excellent for certain vector drawing tasks but less versatile for mixed graphics and modern workflows.</td><td>Supports CAD review, 3D visualization, mark-up, colour graphics and printed plans.</td></tr>
+          <tr><td>Initial cost</td><td>Specialized plotters may require a significant investment and dedicated space.</td><td>Cost varies widely; monitors and printers can be selected separately for the required workload.</td></tr>
+          <tr><td>Long-term cost</td><td>May involve specialized maintenance, parts and supplies.</td><td>Includes ink/toner, paper, maintenance and eventual hardware replacement; common supplies may be easier to source.</td></tr>
+        </tbody>
+      </table></div>
+      <h3>Recommendation</h3>
+      <p>Choose a quality UHD monitor and large-format printer for most firms because it combines on-screen inspection, easy revision, broad file compatibility and convenient production of full-size plans. Before printing, verify scale, line weights, dimensions and paper size. Choose a dedicated plotter only when its precision, throughput, media support or integration provides a clear advantage.</p>
+      <div class="note"><strong>Important distinction:</strong> A monitor does not replace a physical drawing. The printer produces the blueprint, so final line clarity and scale should be checked on a test print.</div>
+    </section>
+
+    <section class="card" id="q7">
+      <span class="q-label">QUESTION 7 · EVALUATING</span>
+      <h2>Facial recognition versus voice recognition for biometric authentication</h2>
+      <p>In a noisy, publicly exposed environment, neither facial nor voice recognition should be treated as infallible. Performance depends on sensor quality, environmental conditions, anti-spoofing controls and implementation.</p>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Factor</th><th>Facial recognition</th><th>Voice recognition</th></tr></thead>
+        <tbody>
+          <tr><td>Environmental reliability</td><td>Can be affected by poor lighting, camera angle, masks, occlusion and image quality.</td><td>Can be seriously affected by ambient noise, reverberation, distance and overlapping speech.</td></tr>
+          <tr><td>Public exposure</td><td>A camera may capture a face without deliberate cooperation, creating privacy concerns.</td><td>Nearby people may hear or record spoken prompts; speech can be replayed if the system is poorly designed.</td></tr>
+          <tr><td>Spoofing risks</td><td>Photos, videos or masks may attack weak systems; robust liveness checks reduce but do not eliminate risk.</td><td>Recordings, synthesized speech or voice conversion may attack weak systems; challenge-response and anti-spoofing help.</td></tr>
+          <tr><td>Accessibility</td><td>May be difficult for users with certain facial differences or when the face is covered.</td><td>May be difficult for people with speech differences or in environments where speaking is unsuitable.</td></tr>
+          <tr><td>Privacy and bias</td><td>Raises concerns about surveillance, demographic performance differences and retention of face data.</td><td>Voice data can reveal identity and may contain sensitive information; performance can vary with accents and speech patterns.</td></tr>
+        </tbody>
+      </table></div>
+      <h3>Critical assessment and safeguards</h3>
+      <ul>
+        <li>High ambient noise makes voice recognition less reliable unless microphones and noise reduction are suitable.</li>
+        <li>Facial recognition may work without speech, but lighting, camera position and crowd conditions still matter.</li>
+        <li>Use a second factor such as a secure card or device-based authenticator for high-risk access.</li>
+        <li>Apply liveness detection, rate limits, encryption, minimal data retention, audit logs and a secure fallback process.</li>
+        <li>Test false acceptance and false rejection rates in the actual environment and across user groups.</li>
+      </ul>
+      <div class="note"><strong>Conclusion:</strong> In high-noise public spaces, face recognition may be more usable than voice recognition in some situations, but it is not automatically more secure. A well-designed multi-factor system with privacy protections is preferable to relying on either biometric alone.</div>
+    </section>
+
+    <section class="card" id="q8">
+      <span class="q-label">QUESTION 8 · CREATING</span>
+      <h2>Accessible, hands-free workstation for a visually impaired user</h2>
+      <p>The workstation should let the user operate a computer and receive information without relying on sight or requiring routine hand use. The exact combination should be adapted to the user's abilities and preferences.</p>
+      <h3>Proposed integrated system</h3>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Component</th><th>Purpose</th><th>How it integrates</th></tr></thead>
+        <tbody>
+          <tr><td>Voice recognition / speech control</td><td>Hands-free commands, dictation and navigation.</td><td>A microphone sends speech to accessibility software that converts supported commands into computer actions.</td></tr>
+          <tr><td>Screen reader</td><td>Reads interface text, menus, documents and status messages aloud.</td><td>Works with the operating system and accessible applications; keyboard focus and labels must be properly exposed.</td></tr>
+          <tr><td>Speech synthesizer and headphones</td><td>Provides spoken feedback privately and clearly.</td><td>Announces focus, errors, confirmations and document content; headphones reduce disturbance to others.</td></tr>
+          <tr><td>Refreshable Braille display</td><td>Provides tactile access to text and navigation.</td><td>Connects to the screen reader and converts supported text into Braille cells.</td></tr>
+          <tr><td>Tactile keyboard / alternative switch</td><td>Backup for precise shortcuts and situations where speech is unsuitable.</td><td>Raised key markers or an accessible layout support touch typing; switches can be configured for individual needs.</td></tr>
+          <tr><td>Accessible scanner with OCR</td><td>Converts printed documents into searchable text.</td><td>The scanner captures a page; OCR recognizes text, which the screen reader reads aloud or sends to Braille.</td></tr>
+          <tr><td>Accessible setup</td><td>Improves comfort, safety and independence.</td><td>Use clear cable management, reachable controls, consistent device placement, adjustable volume and backup power.</td></tr>
+        </tbody>
+      </table></div>
+      <h3>Example workflow</h3>
+      <ol>
+        <li>The user says a wake phrase or activates voice control and dictates a document.</li>
+        <li>The screen reader announces the active application, menu and typing status.</li>
+        <li>The user navigates with spoken commands or keyboard shortcuts and hears confirmation before important actions.</li>
+        <li>For detailed reading, the user sends text to a refreshable Braille display.</li>
+        <li>To read a paper handout, the user scans it, runs OCR and listens to the recognized text.</li>
+      </ol>
+      <h3>Safety, privacy and usability</h3>
+      <ul>
+        <li>Require confirmation before deleting files, sending messages or making purchases.</li>
+        <li>Use a headset microphone, local speech processing where possible, and secure login to protect private information.</li>
+        <li>Provide an alternative to voice commands for noisy rooms or speech-recognition errors.</li>
+        <li>Choose software and hardware with the user, then train and test the complete workflow with their everyday tasks.</li>
+      </ul>
+      <div class="note"><strong>Design principle:</strong> Accessibility is strongest when input, feedback and recovery work together. Voice control enables hands-free operation, while screen-reader speech and Braille provide non-visual feedback and a tactile alternative.</div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Computer Fundamentals Study Guide · Questions 1–8</p>
+    <a class="top-link" href="#top">Back to top ↑</a>
+  </footer>
+</body>
+</html>
